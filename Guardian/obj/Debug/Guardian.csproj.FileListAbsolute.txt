@@ -1,0 +1,6 @@
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\bin\Debug\Guardian.dll
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\bin\Debug\Guardian.pdb
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Debug\Guardian.csprojAssemblyReference.cache
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Debug\Guardian.csproj.CoreCompileInputs.cache
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Debug\Guardian.dll
+C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Debug\Guardian.pdb

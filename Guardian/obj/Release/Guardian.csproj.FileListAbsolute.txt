@@ -1,6 +1,0 @@
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Release\Guardian.csproj.CoreCompileInputs.cache
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\bin\Release\Guardian.dll
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\bin\Release\Guardian.pdb
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Release\Guardian.dll
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Release\Guardian.pdb
-C:\Users\Maurice Huber\source\repos\Guardian\Guardian\obj\Release\Guardian.csprojAssemblyReference.cache

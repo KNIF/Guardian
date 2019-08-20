@@ -1,9 +1,8 @@
 # Guardian
-Basic Anti-Debugger Detection in C#
+Basic Debugger Detection in C# (Process Monitor, Anti-Debugger)
 
-# TO THE SKIDS:
-STOP F\*CKING SKIDDING MY SH\*T
-Thank you
+# TO THE SKIDS
+Stop using my code without giving credits thx.
 
 # Important!!!
 This was meant to be sold before it became open source.

@@ -1,8 +1,8 @@
-﻿using System;
+using System;
 using System.Collections;
 using System.Diagnostics;
 using System.Threading;
-using System.Reflection;
+using System.Collections.Generic;
 
 namespace Guardian
 {
@@ -62,7 +62,7 @@ namespace Guardian
                 "memoryscanner",
                 "memory scanner"
             };
-            string[] whitelist = new string[]
+            List<string> whitelist = new List<string>()
             {
                 "winstore.app",
                 "vmware-usbarbitrator64",
@@ -86,7 +86,7 @@ namespace Guardian
                     {
                         for (int i = 0; i < blacklist.Length; i++)
                         {
-                            if (process.ProcessName.ToLower().Contains(blacklist[i]) && !process.ProcessName.ToLower().Contains(whitelist[i]))
+                            if (process.ProcessName.ToLower().Contains(blacklist[i]) && !whitelist.Contains(process.ProcessName.ToLower()))
                             {
                                 MemberFilter(string.Concat(new object[]{
                                 "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Debugger or Program modification tool detected {1}! Please close ",
@@ -99,7 +99,7 @@ namespace Guardian
                                     Process.GetCurrentProcess().Kill();
                                 }
                             }
-                            if (process.MainWindowTitle.ToLower().Contains(blacklist[i]) && !process.MainWindowTitle.ToLower().Contains(whitelist[i]))
+                            if (process.MainWindowTitle.ToLower().Contains(blacklist[i]) && !whitelist.Contains(process.MainWindowTitle.ToLower()))
                             {
                                 MemberFilter(string.Concat(new object[]{
                                 "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Debugger or Program modification tool detected {2}! Please close ",

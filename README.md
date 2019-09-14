@@ -16,7 +16,6 @@ List<string> AntiNetBlacklist = new List<string>() { "pastebin.com", "mywebsite.
 
 Guardian.Main.Start(urlForHashCheck, AntiDump, AntiDebug, AntiEmulation, AntiNetBlacklist); // Run Guardian with the settings provided above
 ```
-- Done
 
 ## Further Improvements you can make
 - Add more protections
@@ -25,4 +24,5 @@ Guardian.Main.Start(urlForHashCheck, AntiDump, AntiDebug, AntiEmulation, AntiNet
 - Add a simple hash check for the DLL to prevent file replacing
 - Obfuscate the DLL
 
-### NO FURTHER SUPPORT WILL BE PROVIDED!!!
+### This project is not longer active, so I made it open-source.
+### If you have any questions just message me on Discord: KNIF#0001

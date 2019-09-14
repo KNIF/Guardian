@@ -1,3 +1,7 @@
 .vs
 Guardian\bin
+Guardian\bin\Debug
+Guardian\bin\Release
 Guardian\obj
+Guardian\obj\Debug
+Guardian\obj\Release

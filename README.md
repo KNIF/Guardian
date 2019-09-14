@@ -3,8 +3,6 @@ Basic Debugger Detection in C# (Process Monitor, Anti-Debugger)
 
 **TO THE SKIDS:** Stop using my code without giving credits thx.
 
-### NO SUPPORT WILL BE PROVIDED!!!
-
 ## Instructions
 1. Clone & Build the DLL
 2. Add Guardian.dll as a reference to your project
@@ -19,3 +17,5 @@ List<string> AntiNetBlacklist = new List<string>() { "pastebin.com", "mywebsite.
 Guardian.Main.Start(urlForHashCheck, AntiDump, AntiDebug, AntiEmulation, AntiNetBlacklist); // Run Guardian with the settings provided above
 ```
 4. Done
+
+### NO FURTHER SUPPORT WILL BE PROVIDED!!!

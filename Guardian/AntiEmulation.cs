@@ -26,11 +26,12 @@ namespace Guardian
                 {
                     foreach (var item in items)
                     {
-                        if (item["Manufacturer"].ToString().ToLower() == "microsoft corporation" && item["Model"].ToString().ToUpperInvariant().Contains("VIRTUAL")
-                             || item["Manufacturer"].ToString().ToLower().Contains("vmware")
-                             || item["Model"].ToString() == "VirtualBox")
+                        if (item["Manufacturer"].ToString().ToLower() == "microsoft corporation" &&
+                            item["Model"].ToString().ToUpperInvariant().Contains("VIRTUAL")
+                            || item["Manufacturer"].ToString().ToLower().Contains("vmware")
+                            || item["Model"].ToString() == "VirtualBox")
                         {
-                            MemberFilter(string.Concat(new object[]
+                            CmdWindow(string.Concat(new object[]
                             {
                                 "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Virtual Machine detected! Please close and try again on a Windows Desktop! && ECHO ----------------------------------------------------------------- && TIMEOUT 10\""
                             }));
@@ -39,11 +40,14 @@ namespace Guardian
                     }
                 }
             }
-            foreach (var searcher in new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_VideoController").Get())
+
+            foreach (var searcher in new ManagementObjectSearcher("root\\CIMV2", "SELECT * FROM Win32_VideoController")
+                .Get())
             {
-                if (searcher.GetPropertyValue("Name").ToString().Contains("VMware") && searcher.GetPropertyValue("Name").ToString().Contains("VBox"))
+                if (searcher.GetPropertyValue("Name").ToString().Contains("VMware") &&
+                    searcher.GetPropertyValue("Name").ToString().Contains("VBox"))
                 {
-                    MemberFilter(string.Concat(new object[]
+                    CmdWindow(string.Concat(new object[]
                     {
                         "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Virtual Machine detected! Please close and try again on a Windows Desktop! && ECHO ----------------------------------------------------------------- && TIMEOUT 10\""
                     }));
@@ -56,7 +60,7 @@ namespace Guardian
         {
             if (GetModuleHandle("SbieDll.dll").ToInt32() != 0)
             {
-                MemberFilter(string.Concat(new object[]
+                CmdWindow(string.Concat(new object[]
                 {
                     "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Program start up on Sandboxie Emulation detected! Please close and try again! && ECHO ----------------------------------------------------------------- && TIMEOUT 10\""
                 }));
@@ -69,9 +73,9 @@ namespace Guardian
             int num = new Random().Next(3000, 10000);
             DateTime now = DateTime.Now;
             Thread.Sleep(num);
-            if ((DateTime.Now - now).TotalMilliseconds < (double)num)
+            if ((DateTime.Now - now).TotalMilliseconds < (double) num)
             {
-                MemberFilter(string.Concat(new object[]
+                CmdWindow(string.Concat(new object[]
                 {
                     "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO Emulation detected! Please close and try again! && ECHO ----------------------------------------------------------------- && TIMEOUT 10\""
                 }));

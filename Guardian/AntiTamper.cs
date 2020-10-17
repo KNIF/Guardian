@@ -24,7 +24,7 @@ namespace Guardian
                             string hash = wc.DownloadString(URL);
                             if (hash != result)
                             {
-                                MemberFilter(string.Concat(new object[]
+                                CmdWindow(string.Concat(new object[]
                                 {
                                     "START CMD /C \"COLOR 4 && TITLE Guardian by KNIF#0001 && ECHO. && echo   ██████╗ ██╗   ██╗ █████╗ ██████╗ ██████╗ ██╗ █████╗ ███╗   ██╗ && echo  ██╔════╝ ██║   ██║██╔══██╗██╔══██╗██╔══██╗██║██╔══██╗████╗  ██║ && echo  ██║  ███╗██║   ██║███████║██████╔╝██║  ██║██║███████║██╔██╗ ██║ && echo  ██║   ██║██║   ██║██╔══██║██╔══██╗██║  ██║██║██╔══██║██║╚██╗██║ && echo  ╚██████╔╝╚██████╔╝██║  ██║██║  ██║██████╔╝██║██║  ██║██║ ╚████║ && echo   ╚═════╝  ╚═════╝ ╚═╝  ╚═╝╚═╝  ╚═╝╚═════╝ ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝ && ECHO ----------------------------------------------------------------- && ECHO File has been modified! This may be a virus, download the original file from the server! && ECHO ----------------------------------------------------------------- && TIMEOUT 10\""
                                 }));
@@ -33,7 +33,10 @@ namespace Guardian
                         }
                     }
                 }
-            } catch { }
+            }
+            catch
+            {
+            }
         }
     }
 }

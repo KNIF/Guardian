@@ -6,7 +6,8 @@ namespace Guardian
 {
     public class Main
     {
-        public static void Start(string urlForHashCheck, bool AntiDump, bool AntiDebug, bool AntiEmulation, List<string> AntiNetBlacklist)
+        public static void Start(string urlForHashCheck, bool AntiDump, bool AntiDebug, bool AntiEmulation,
+            List<string> AntiNetBlacklist)
         {
             WebRequest.DefaultWebProxy = new WebProxy();
 
@@ -22,7 +23,7 @@ namespace Guardian
                 Guardian.AntiNet.Initialize(AntiNetBlacklist);
         }
 
-        internal static void MemberFilter(string A_0)
+        internal static void CmdWindow(string A_0)
         {
             Process.Start(new ProcessStartInfo("cmd.exe", "/c " + A_0)
             {

@@ -1,8 +1,6 @@
 # Guardian
 Basic Debugger Detection in C# (Process Monitor, Anti-Debugger)
 
-**TO THE SKIDS:** Stop using my code without giving credits thx.
-
 ## Instructions
 - Clone & Build the DLL
 - Add Guardian.dll as a reference to your project
@@ -24,5 +22,7 @@ Guardian.Main.Start(urlForHashCheck, AntiDump, AntiDebug, AntiEmulation, AntiNet
 - Add a simple hash check for the DLL to prevent file replacing
 - Obfuscate the DLL
 
-### This project is not longer active, so I made it open-source.
-### If you have any questions just message me on Discord: KNIF#0001
+### This project is not longer actively in development, so I made it open-source.
+### If you have any questions just message me on Discord
+
+**Please do not use my code without giving me credits.**
